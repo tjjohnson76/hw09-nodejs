@@ -64,45 +64,47 @@ const questions = [
 function writeToFile(fileName, data) {
 
 
-    let fileString = (`
-        # ${data.title}
+    let fileString = (
+`
+# ${data.title}
 
 
-        ## Table of Contents
-        - Descrition
-        - Installation Instructions
-        - Usage Information
-        - License
-        - Contribution Guidelines
-        - Test Instructions
-        - Questions
+## Table of Contents
+- Descrition
+- Installation Instructions
+- Usage Information
+- License
+- Contribution Guidelines
+- Test Instructions
+- Questions
 
-        ## Description
-        ${data.description}
+## Description
+${data.description}
 
-        ## Installation
-        ${data.installInstructions}
+## Installation
+${data.installInstructions}
 
-        ## Usage
-        ${data.useInfo}
+## Usage
+${data.useInfo}
 
-        ## License
+## License
 
 
-        ## Contribution
-        ${data.contribution}
+## Contribution
+${data.contribution}
 
-        ## Tests
-        ${data.testInstructions}
+## Tests
+${data.testInstructions}
 
-        ## Questions
+## Questions
 
-        [GitHub](https://github.com/${data.github})
-        Email: ${data.email}
-            - Feel free to contact me at any time with questions, but please allow a few days for a response.
-        `);
+[GitHub](https://github.com/${data.github})
 
-    fs.writeFile(fileName, fileString.raw[0],(err) => err ? console.log(err) : console.log("Success!"));
+Email: ${data.email}
+    - Feel free to contact me at any time with questions, but please allow a few days for a response.
+`);
+
+    fs.writeFile(fileName, fileString,(err) => err ? console.log(err) : console.log("Success!"));
 
 }
 
