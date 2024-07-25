@@ -100,7 +100,7 @@ function writeToFile(fileName, data) {
         [GitHub](https://github.com/${data.github})
         Email: ${data.email}
             - Feel free to contact me at any time with questions, but please allow a few days for a response.
-        `)
+        `);
 
     fs.writeFile(fileName, fileString.raw[0],(err) => err ? console.log(err) : console.log("Success!"));
 
