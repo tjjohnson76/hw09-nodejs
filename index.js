@@ -63,20 +63,35 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 
+let licenseStr;
+
+if (data.license === "MIT"){
+    licenseStr = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+} else if(data.license === "IBM"){
+    licenseStr = `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
+} else if(data.license === "Apache"){
+    licenseStr = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+} else if(data.license === "Eclipse"){
+    licenseStr = `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
+} else {
+    licenseStr = `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+}
+
 
     let fileString = (
 `
 # ${data.title}
 
+${licenseStr}
 
 ## Table of Contents
-- Descrition
-- Installation Instructions
-- Usage Information
-- License
-- Contribution Guidelines
-- Test Instructions
-- Questions
+- [Descrition](#description)
+- [Installation Instructions](#installation)
+- [Usage Information](#usage)
+- [License](#license)
+- [Contribution Guidelines](#contribution)
+- [Test Instructions](#tests)
+- [Questions](#questions)
 
 ## Description
 ${data.description}
@@ -89,6 +104,7 @@ ${data.useInfo}
 
 ## License
 
+This application is covered under the ${data.license} license.
 
 ## Contribution
 ${data.contribution}

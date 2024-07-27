@@ -1,36 +1,39 @@
 
-# Title
+# Example Title
 
+[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
 
 ## Table of Contents
-- Descrition
-- Installation Instructions
-- Usage Information
-- License
-- Contribution Guidelines
-- Test Instructions
-- Questions
+- [Descrition](#description)
+- [Installation Instructions](#installation)
+- [Usage Information](#usage)
+- [License](#license)
+- [Contribution Guidelines](#contribution)
+- [Test Instructions](#tests)
+- [Questions](#questions)
 
 ## Description
-desc
+Example Description
 
 ## Installation
-instal
+Example Install
 
 ## Usage
-info
+Example Usage
 
 ## License
 
+This application is covered under the Eclipse license.
 
 ## Contribution
-cont
+Example Contribution
 
 ## Tests
-test
+Example Test
 
 ## Questions
 
 [GitHub](https://github.com/tjjohnson76)
-Email: tanner@emial.com
+
+Email: example@email.com
     - Feel free to contact me at any time with questions, but please allow a few days for a response.
